@@ -18,20 +18,6 @@ const cards: CardDefinition[] = [
     cvvLength: [3],
     luhn: true,
   }, {
-    type: 'forbrugsforeningen',
-    patterns: [600],
-    format: defaultFormat,
-    length: [16],
-    cvvLength: [3],
-    luhn: true,
-  }, {
-    type: 'dankort',
-    patterns: [5019],
-    format: defaultFormat,
-    length: [16],
-    cvvLength: [3],
-    luhn: true,
-  }, {
     type: 'visa',
     patterns: [4],
     format: defaultFormat,
@@ -60,28 +46,15 @@ const cards: CardDefinition[] = [
     cvvLength: [3],
     luhn: true,
   }, {
-    type: 'discover',
-    patterns: [60, 64, 65, 622],
-    format: defaultFormat,
-    length: [16],
-    cvvLength: [3],
-    luhn: true,
-  }, {
     type: 'unionpay',
-    patterns: [62, 88],
+    patterns: [60, 62, 68, 69, 81, 90, 91, 94, 95, 96, 98, 99],
     format: defaultFormat,
-    length: [16, 17, 18, 19],
-    cvvLength: [3],
+    length: [13, 16, 19],
+    cvvLength: [3,4],
     luhn: false,
-  }, {
-    type: 'jcb',
-    patterns: [35],
-    format: defaultFormat,
-    length: [16, 19],
-    cvvLength: [3],
-    luhn: true,
-  },
+  }
 ];
+
 
 // @dynamic
 export class CreditCard {
